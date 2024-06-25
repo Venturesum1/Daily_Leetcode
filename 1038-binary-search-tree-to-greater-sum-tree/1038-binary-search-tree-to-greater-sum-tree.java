@@ -14,13 +14,13 @@
  * }
  */
 class Solution {
-    private int sum = 0;
+    private int sumofroot = 0;
     
     public TreeNode bstToGst(TreeNode root) {  
         if (root != null) {
             bstToGst(root.right);  
-            sum += root.val;  
-            root.val = sum;  
+            sumofroot += root.val;  
+            root.val = sumofroot;  
             bstToGst(root.left);  
         }
         return root;
